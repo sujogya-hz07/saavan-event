@@ -1,0 +1,640 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+      .font-sans {
+        font-family: "Montserrat", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .bg-assam-heritage {
+        background-color: #fdfaf5;
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23800000' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 32c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm21-17c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm5 51c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm33-33c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 49c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm58-16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM27 63c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-9-5c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm28-48c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM43 38c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM33 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM24 35c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm54 19c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body
+    class="bg-assam-heritage text-gray-800 font-sans antialiased overflow-x-hidden"
+  >
+    <nav
+      class="border-b border-gray-100 py-4 bg-white/95 backdrop-blur-md sticky top-0 z-[100]"
+    >
+      <div class="flex items-center justify-between px-6 md:px-20">
+        <a
+          href="#"
+          class="relative z-[120] bg-[#800000] px-5 py-2 rounded-lg shadow-sm"
+        >
+          <span class="text-white font-serif text-sm tracking-wider"
+            >SAAVAN</span
+          >
+        </a>
+
+        <ul
+          class="hidden lg:flex items-center space-x-10 text-[11px] tracking-[0.25em] text-gray-500 font-medium"
+        >
+          <li>
+            <a href="/index.html" class="hover:text-[#800000] transition-colors"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-[#800000] transition-colors"
+              >ABOUT</a
+            >
+          </li>
+          <li>
+            <a
+              href="/services.html"
+              class="hover:text-[#800000] transition-colors"
+              >SERVICES</a
+            >
+          </li>
+          <li>
+            <a
+              href="/portfolio.html"
+              class="hover:text-[#800000] transition-colors"
+              >PORTFOLIO</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testimonials.html"
+              class="hover:text-[#800000] transition-colors"
+              >TESTIMONIALS</a
+            >
+          </li>
+          <li>
+            <a
+              href="./index.html#contact"
+              class="hover:text-[#800000] transition-colors"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+
+        <button
+          id="menu-btn"
+          class="lg:hidden relative z-[120] p-2 focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <div
+            id="hamburger"
+            class="w-6 h-4 relative flex flex-col justify-between"
+          >
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300 transform origin-center"
+            ></span>
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300"
+            ></span>
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300 transform origin-center"
+            ></span>
+          </div>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 h-screen w-screen bg-white translate-y-[-100%] transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] z-[110] flex flex-col items-center justify-center pointer-events-none opacity-0 transition-opacity"
+      >
+        <div
+          class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
+          <span
+            class="text-[20vw] font-serif italic text-gray-50 opacity-[0.03] select-none"
+            >Saavan</span
+          >
+        </div>
+
+        <div
+          class="relative flex flex-col items-center space-y-8 md:space-y-12 text-center"
+        >
+          <a
+            href="/index.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Home</a
+          >
+          <a
+            href="/about.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >About</a
+          >
+          <a
+            href="/services.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Services</a
+          >
+          <a
+            href="/portfolio.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="/testimonials.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Testimonials</a
+          >
+          <a
+            href="./index.html#contact"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Contact</a
+          >
+        </div>
+
+        <div
+          class="absolute bottom-12 text-[10px] tracking-[0.3em] text-gray-400 uppercase"
+        >
+          Instagram — Pinterest — Facebook
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero text -->
+
+    <section class="max-w-7xl mx-auto px-6 pt-24 pb-12 text-center">
+      <span
+        class="text-[10px] tracking-[0.4em] text-[#800000] font-bold uppercase block mb-4"
+        >Our Journey</span
+      >
+      <h1 class="font-serif italic text-5xl md:text-7xl text-gray-800 mb-8">
+        Crafting Legacies in the <br />Heart of Assam
+      </h1>
+      <div class="w-20 h-[1px] bg-[#800000] mx-auto opacity-30"></div>
+    </section>
+
+    <!-- about -->
+
+    <section class="max-w-6xl mx-auto px-6 py-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1">
+          <h2 class="font-serif text-3xl mb-6">Born from Tradition</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-6 font-light">
+            Founded in Guwahati, Saavan Heritage Events began with a simple
+            observation: modern celebrations were losing their soulful
+            connection to the earth and our ancestors. We set out to bridge the
+            gap between contemporary luxury and the raw, rhythmic beauty of
+            Northeast Indian traditions.
+          </p>
+          <p class="text-gray-500 text-sm leading-relaxed font-light">
+            Whether it's the intricate weaving of a <i>Muga Mekhela Sador</i> or
+            the sacred chanting of a <i>Vedic Mahurat</i>, we believe that the
+            details of our heritage are what make a wedding truly unforgettable.
+            We don't just plan events; we preserve stories.
+          </p>
+        </div>
+        <div class="order-1 md:order-2">
+          <img
+            src="https://i.pinimg.com/1200x/90/bd/21/90bd213217f6e8d5987626daccd15f52.jpg"
+            alt="Heritage Detail"
+            class="rounded-sm shadow-2xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-24 border-y border-gray-50">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center"
+      >
+        <div>
+          <span class="font-serif text-[#800000] text-3xl italic block mb-4"
+            >01.</span
+          >
+          <h3 class="tracking-widest text-xs font-bold uppercase mb-4">
+            Authentic Artistry
+          </h3>
+          <p class="text-gray-400 text-xs leading-relaxed px-6">
+            Collaborating exclusively with local artisans, weavers, and folk
+            performers to keep our culture alive.
+          </p>
+        </div>
+        <div>
+          <span class="font-serif text-[#800000] text-3xl italic block mb-4"
+            >02.</span
+          >
+          <h3 class="tracking-widest text-xs font-bold uppercase mb-4">
+            Soulful Luxury
+          </h3>
+          <p class="text-gray-400 text-xs leading-relaxed px-6">
+            Blending high-end production with the quiet, intentional grace of
+            traditional Assamese hospitality.
+          </p>
+        </div>
+        <div>
+          <span class="font-serif text-[#800000] text-3xl italic block mb-4"
+            >03.</span
+          >
+          <h3 class="tracking-widest text-xs font-bold uppercase mb-4">
+            Sustainable Roots
+          </h3>
+          <p class="text-gray-400 text-xs leading-relaxed px-6">
+            Using locally sourced florals and hand-crafted decor to ensure every
+            celebration respects the land.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- founder message -->
+
+    <section class="max-w-5xl mx-auto px-6 pt-10 py-12">
+      <div class="flex flex-col md:flex-row gap-16 items-start">
+        <div class="w-full md:w-1/3">
+          <img
+            src="https://i.pinimg.com/736x/87/36/ff/8736ffe591cb918fba327bb25a0f80d7.jpg"
+            alt="Saavan Baruah"
+            class="rounded-full transition-all duration-1000 border-4 border-[#fdfaf5] shadow-xl"
+          />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-serif italic text-3xl text-gray-800 mb-6">
+            A Message from Saavan
+          </h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-6 italic">
+            "I remember watching my grandmother prepare for a Joron ceremony—the
+            meticulous care, the specific placement of the tamul-pan, the quiet
+            reverence for the ritual. That sense of 'purpose' is what I bring to
+            every wedding we design today. My mission is to ensure that while
+            your wedding is grand, its soul remains deeply rooted in the soil of
+            Assam."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-8 h-[1px] bg-[#800000]"></div>
+            <p class="font-serif text-lg text-gray-700">
+              Founder & Creative Director
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <!-- Images -->
+
+    <section class="max-w-7xl mx-auto px-6 py-14">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div class="max-w-xl">
+          <span
+            class="text-[10px] tracking-[0.4em] text-[#800000] font-bold uppercase block mb-4"
+            >Visual Narratives</span
+          >
+          <h2 class="font-serif italic text-4xl md:text-5xl text-gray-800">
+            Moments Frozen in Time
+          </h2>
+        </div>
+        <a
+          href="/portfolio.html"
+          class="text-[10px] tracking-[0.3em] text-gray-400 uppercase border-b border-gray-200 pb-1 hover:text-[#800000] hover:border-[#800000] transition-all mt-6 md:mt-0"
+          >Explore Full Portfolio</a
+        >
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+        <div class="md:col-span-8 group overflow-hidden relative">
+          <img
+            src="https://i.pinimg.com/736x/95/d8/26/95d8263b39222d17c5aa33f0c32653bf.jpg"
+            class="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
+            alt="Assamese Wedding Setup"
+          />
+          <div
+            class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+          >
+            <span class="text-white font-serif italic text-2xl"
+              >The Royal Mandap</span
+            >
+          </div>
+        </div>
+        <div class="md:col-span-4 grid grid-rows-2 gap-6">
+          <div class="group overflow-hidden relative">
+            <img
+              src="https://i.pinimg.com/1200x/07/8d/b6/078db6cc967349ac52775b8589125c1f.jpg"
+              class="w-full h-full object-cover transition-all duration-1000"
+              alt="Joron Ceremony"
+            />
+          </div>
+          <div
+            class="group overflow-hidden relative bg-[#800000] p-8 flex flex-col justify-center text-white"
+          >
+            <h4 class="font-serif italic text-3xl mb-4">
+              Every Fold, A Story.
+            </h4>
+            <p
+              class="text-xs leading-relaxed opacity-80 font-light tracking-wide"
+            >
+              From the glint of the 'Gana' to the scent of fresh 'Kopou Phool',
+              we ensure the sensory heritage of Assam is felt in every corner of
+              your celebration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f9f5f0] py-12 relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 translate-x-1/6 -translate-y-1/4 pointer-events-none opacity-[0.03]"
+      >
+        <span class="text-[16rem] font-serif italic text-[#800000]"
+          >Tradition</span
+        >
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20">
+          <h2 class="font-serif text-4xl md:text-5xl text-gray-800 mb-6">
+            Honoring the Ancestral Rhythms
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-500 text-sm font-light">
+            We specialize in the intricate logistics of traditional Assamese and
+            North-Indian rituals, ensuring each phase is executed with sacred
+            precision.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-10 shadow-sm hover:shadow-xl transition-shadow border-t-2 border-transparent hover:border-[#800000]"
+          >
+            <h4 class="font-serif italic text-2xl mb-4 text-[#800000]">
+              Joron
+            </h4>
+            <p
+              class="text-xs text-gray-400 leading-relaxed uppercase tracking-widest mb-4"
+            >
+              The Pre-Wedding Grace
+            </p>
+            <p class="text-sm text-gray-500 font-light">
+              Meticulous management of the bridal gifts and the arrival of the
+              groom's family with traditional honor.
+            </p>
+          </div>
+          <div
+            class="bg-white p-10 shadow-sm hover:shadow-xl transition-shadow border-t-2 border-transparent hover:border-[#800000]"
+          >
+            <h4 class="font-serif italic text-2xl mb-4 text-[#800000]">
+              Sangeet
+            </h4>
+            <p
+              class="text-xs text-gray-400 leading-relaxed uppercase tracking-widest mb-4"
+            >
+              Rhythm of the Soul
+            </p>
+            <p class="text-sm text-gray-500 font-light">
+              A blend of Bollywood grandeur and traditional Bihu beats to set
+              the stage on fire.
+            </p>
+          </div>
+          <div
+            class="bg-white p-10 shadow-sm hover:shadow-xl transition-shadow border-t-2 border-transparent hover:border-[#800000]"
+          >
+            <h4 class="font-serif italic text-2xl mb-4 text-[#800000]">Biya</h4>
+            <p
+              class="text-xs text-gray-400 leading-relaxed uppercase tracking-widest mb-4"
+            >
+              The Sacred Union
+            </p>
+            <p class="text-sm text-gray-500 font-light">
+              Authentic Vedic or Homa ceremonies curated under heritage mandaps
+              crafted by local artisans.
+            </p>
+          </div>
+          <div
+            class="bg-white p-10 shadow-sm hover:shadow-xl transition-shadow border-t-2 border-transparent hover:border-[#800000]"
+          >
+            <h4 class="font-serif italic text-2xl mb-4 text-[#800000]">
+              Reception
+            </h4>
+            <p
+              class="text-xs text-gray-400 leading-relaxed uppercase tracking-widest mb-4"
+            >
+              The Grand Finale
+            </p>
+            <p class="text-sm text-gray-500 font-light">
+              Conceptualized dinner galas featuring the finest Assamese
+              hospitality and global culinary standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- counters -->
+
+    <section class="max-w-7xl mx-auto px-6 py-12 border-b border-gray-100">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+        <div>
+          <p class="font-serif text-5xl text-[#800000] mb-2">12+</p>
+          <p
+            class="text-[9px] tracking-[0.4em] text-gray-400 uppercase font-bold"
+          >
+            Years of Legacy
+          </p>
+        </div>
+        <div>
+          <p class="font-serif text-5xl text-[#800000] mb-2">450+</p>
+          <p
+            class="text-[9px] tracking-[0.4em] text-gray-400 uppercase font-bold"
+          >
+            Weddings Curated
+          </p>
+        </div>
+        <div>
+          <p class="font-serif text-5xl text-[#800000] mb-2">25+</p>
+          <p
+            class="text-[9px] tracking-[0.4em] text-gray-400 uppercase font-bold"
+          >
+            Awards Won
+          </p>
+        </div>
+        <div>
+          <p class="font-serif text-5xl text-[#800000] mb-2">100%</p>
+          <p
+            class="text-[9px] tracking-[0.4em] text-gray-400 uppercase font-bold"
+          >
+            Bespoke Designs
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="bg-[#800000] py-20 text-center text-white">
+      <h3 class="font-serif italic text-3xl mb-8">
+        Ready to write your chapter?
+      </h3>
+      <a
+        href="index.html#contact"
+        class="inline-block border border-white/30 px-12 py-4 text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-[#800000] transition-all"
+        >Get in Touch</a
+      >
+    </section>
+
+    <footer class="bg-white border-t border-gray-100 pt-24 pb-12">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 mb-20"
+      >
+        <div>
+          <h5 class="font-serif italic text-xl mb-6">Stay Inspired</h5>
+          <p class="text-xs text-gray-400 tracking-widest uppercase mb-4">
+            Join our monthly newsletter
+          </p>
+          <div class="flex border-b border-gray-300 pb-2">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="bg-transparent text-sm w-full outline-none placeholder-gray-300 font-light"
+            />
+            <button
+              class="text-[10px] tracking-widest uppercase font-bold text-gray-600"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2
+            class="font-serif text-3xl tracking-widest text-[#800000] mb-6 uppercase"
+          >
+            SAAVAN
+          </h2>
+          <div
+            class="flex justify-center space-x-6 text-gray-400 text-xs tracking-widest"
+          >
+            <a href="#" class="hover:text-black">INSTAGRAM</a>
+            <a href="#" class="hover:text-black">PINTEREST</a>
+            <a href="#" class="hover:text-black">FACEBOOK</a>
+          </div>
+        </div>
+
+        <div class="md:text-right">
+          <h5 class="font-serif italic text-xl mb-6">Get in Touch</h5>
+          <p class="text-gray-500 text-sm font-light mb-1">
+            hello@saavanevents.com
+          </p>
+          <p class="text-gray-500 text-sm font-light mb-1">Guwahati, Assam</p>
+          <p class="text-gray-500 text-sm font-light">+91 8638695791</p>
+        </div>
+      </div>
+
+      <div class="text-center border-t border-gray-50 pt-12">
+        <p class="text-[10px] tracking-[0.3em] text-gray-600 uppercase italic">
+          &copy; 2026 Saavan Events Design Co. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".testimonial-slide");
+      const dots = document.querySelectorAll(".dot");
+
+      let slideIndex = 0;
+      const hero = document.querySelectorAll("#hero-slider .slide");
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const spans = document.querySelectorAll("#hamburger span");
+      let isMenuOpen = false;
+
+      const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          // Open state
+          mobileMenu.classList.replace("translate-y-[-100%]", "translate-y-0");
+          mobileMenu.classList.replace("opacity-0", "opacity-100");
+          mobileMenu.classList.replace(
+            "pointer-events-none",
+            "pointer-events-auto",
+          );
+          document.body.style.overflow = "hidden";
+
+          // X Animation
+          spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+          spans[1].style.opacity = "0";
+          spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
+        } else {
+          // Close state (The animation you want)
+          mobileMenu.classList.replace("translate-y-0", "translate-y-[-100%]");
+          mobileMenu.classList.replace("opacity-100", "opacity-0");
+          mobileMenu.classList.replace(
+            "pointer-events-auto",
+            "pointer-events-none",
+          );
+          document.body.style.overflow = "auto";
+
+          // Hamburger Animation
+          spans[0].style.transform = "none";
+          spans[1].style.opacity = "1";
+          spans[2].style.transform = "none";
+        }
+      };
+
+      // Listeners
+      menuBtn.addEventListener("click", toggleMenu);
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isMenuOpen) toggleMenu(); // Only close if it's actually open
+        });
+      });
+      function autoSlide() {
+        // Hide current slide
+        hero[slideIndex].classList.replace("opacity-100", "opacity-0");
+        hero[slideIndex]
+          .querySelector("img")
+          .classList.remove("animate-kenburns");
+
+        // Move to next slide
+        slideIndex = (slideIndex + 1) % hero.length;
+
+        // Show next slide
+        hero[slideIndex].classList.replace("opacity-0", "opacity-100");
+        hero[slideIndex].querySelector("img").classList.add("animate-kenburns");
+      }
+
+      // Change slide every 5 seconds
+      setInterval(autoSlide, 5000);
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? "1" : "0";
+          slide.style.transform =
+            i === index
+              ? "translateX(0)"
+              : i < index
+                ? "translateX(-20px)"
+                : "translateX(20px)";
+          slide.style.pointerEvents = i === index ? "auto" : "none";
+
+          dots[i].style.backgroundColor = i === index ? "#800000" : "#e5e7eb";
+          dots[i].style.width = i === index ? "24px" : "6px";
+          dots[i].style.borderRadius = i === index ? "4px" : "50%";
+        });
+      }
+
+      function changeSlide(direction) {
+        currentSlide =
+          (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Auto-advance every 5 seconds
+      setInterval(() => changeSlide(1), 5000);
+    </script>
+  </body>
+</html>

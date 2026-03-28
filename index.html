@@ -1,0 +1,1673 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SAAVAN - Assam Heritage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .font-serif {
+        font-family: "Playfair Display", serif;
+      }
+      .font-sans {
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .bg-assam-heritage {
+        background-color: #fdfaf5;
+        background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23800000' fill-opacity='0.02' fill-rule='evenodd'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 32c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm21-17c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm5 51c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm33-33c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM9 49c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm58-16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM27 63c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-9-5c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm28-48c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM43 38c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm33 20c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM24 35c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm54 19c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM10 8c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm66 66c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM48 6c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm16 32c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM40 62c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm16 16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-32 0c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-16-16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm32-32c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm16-16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-16-16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm-16 16c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'/%3E%3C/g%3E%3C/svg%3E");
+      }
+      .mobile-link {
+        transition: all 0.3s;
+      }
+      .mobile-link:hover {
+        color: #800000;
+        letter-spacing: 0.5em;
+      }
+
+      @keyframes kenburns {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+      .animate-kenburns {
+        animation: kenburns 10s ease-out forwards;
+      }
+
+      /* 1. The container/background of the scrollbar */
+      ::-webkit-scrollbar {
+        width: 3px; /* Width of the vertical scrollbar */
+        height: 3px; /* Height of the horizontal scrollbar */
+      }
+
+      /* 2. The draggable handle */
+      ::-webkit-scrollbar-thumb {
+        background: #9f3c3cab; /* Color of the handle */
+        border-radius: 10px; /* Makes it rounded */
+      }
+
+      /* 3. The handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #915050; /* Darkens when you hover over it */
+      }
+
+      /* 4. The track (the area the handle slides in) */
+      ::-webkit-scrollbar-track {
+        background: #dbd6d6; /* Color of the track */
+        border-radius: 10px;
+      }
+
+      /* Hide scrollbar for the whole page if preferred (Optional) */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Modal Animation States */
+      .modal-enter {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+      }
+      .modal-show {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeIn {
+        animation: fadeIn 0.4s ease-out forwards;
+      }
+      /* Hides the default arrow in Chrome/Safari */
+      summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-assam-heritage text-gray-800 font-sans antialiased overflow-x-hidden"
+  >
+    <div
+      class="bg-[#2d2d2d] text-white text-[10px] tracking-widest py-2 px-8 text-right uppercase"
+    >
+      Schedule A Free Mahurat Consultation &rarr;
+    </div>
+
+    <nav
+      class="border-b border-gray-100 py-4 bg-white/95 backdrop-blur-md sticky top-0 z-[100]"
+    >
+      <div class="flex items-center justify-between px-6 md:px-20">
+        <a
+          href="#"
+          class="relative z-[120] bg-[#800000] px-5 py-2 rounded-lg shadow-sm"
+        >
+          <span class="text-white font-serif text-sm tracking-wider"
+            >SAAVAN</span
+          >
+        </a>
+
+        <ul
+          class="hidden lg:flex items-center space-x-10 text-[11px] tracking-[0.25em] text-gray-500 font-medium"
+        >
+          <li>
+            <a href="/index.html" class="hover:text-[#800000] transition-colors"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-[#800000] transition-colors"
+              >ABOUT</a
+            >
+          </li>
+          <li>
+            <a
+              href="/services.html"
+              class="hover:text-[#800000] transition-colors"
+              >SERVICES</a
+            >
+          </li>
+          <li>
+            <a
+              href="/portfolio.html"
+              class="hover:text-[#800000] transition-colors"
+              >PORTFOLIO</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testimonials.html"
+              class="hover:text-[#800000] transition-colors"
+              >TESTIMONIALS</a
+            >
+          </li>
+          <li>
+            <a
+              href="./index.html#contact"
+              class="hover:text-[#800000] transition-colors"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+
+        <button
+          id="menu-btn"
+          class="lg:hidden relative z-[120] p-2 focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <div
+            id="hamburger"
+            class="w-6 h-4 relative flex flex-col justify-between"
+          >
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300 transform origin-center"
+            ></span>
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300"
+            ></span>
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300 transform origin-center"
+            ></span>
+          </div>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 h-screen w-screen bg-white translate-y-[-100%] transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] z-[110] flex flex-col items-center justify-center pointer-events-none opacity-0 transition-opacity"
+      >
+        <div
+          class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
+          <span
+            class="text-[20vw] font-serif italic text-gray-50 opacity-[0.03] select-none"
+            >Saavan</span
+          >
+        </div>
+
+        <div
+          class="relative flex flex-col items-center space-y-8 md:space-y-12 text-center"
+        >
+          <a
+            href="/index.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Home</a
+          >
+          <a
+            href="/about.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >About</a
+          >
+          <a
+            href="/services.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Services</a
+          >
+          <a
+            href="/portfolio.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="/testimonials.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Testimonials</a
+          >
+          <a
+            href="./index.html#contact"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Contact</a
+          >
+        </div>
+
+        <div
+          class="absolute bottom-12 text-[10px] tracking-[0.3em] text-gray-400 uppercase"
+        >
+          Instagram — Pinterest — Facebook
+        </div>
+      </div>
+    </nav>
+
+    <!-- hero -->
+
+    <section
+      id="home"
+      class="relative h-[80vh] flex items-center justify-center overflow-hidden"
+    >
+      <div id="hero-slider" class="absolute inset-0 z-0">
+        <div
+          class="slide absolute inset-0 transition-opacity duration-1000 opacity-100"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1745573673416-66e829644ae9?q=80&w=1334&auto=format&fit=crop"
+            class="w-full h-full object-cover brightness-[0.60] scale-110 animate-kenburns"
+            alt="Assam Heritage 1"
+          />
+        </div>
+        <div
+          class="slide absolute inset-0 transition-opacity duration-1000 opacity-0"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1751257576155-9f25d26fb6ef?q=80&w=2070&auto=format&fit=crop"
+            class="w-full h-full object-cover brightness-[0.60] scale-110"
+            alt="Heritage Decor"
+          />
+        </div>
+        <div
+          class="slide absolute inset-0 transition-opacity duration-1000 opacity-0"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1745573673043-43a4f3b91466?q=80&w=1334&auto=format&fit=crop"
+            class="w-full h-full object-cover brightness-[0.60] scale-110"
+            alt="Traditional Celebration"
+          />
+        </div>
+      </div>
+
+      <div class="relative text-center text-white z-10 px-4">
+        <h1 class="font-serif leading-none tracking-tight">
+          <span class="block text-7xl md:text-9xl tracking-[0.05em] font-medium"
+            >SAAVAN</span
+          >
+          <span
+            class="block italic text-3xl md:text-5xl mt-3 tracking-[0.1em] opacity-80 font-normal"
+            >Heritage Events</span
+          >
+        </h1>
+
+        <p
+          class="text-gray-100 text-sm md:text-lg mt-8 max-w-2xl mx-auto tracking-[0.3em] uppercase font-light leading-relaxed"
+        >
+          Celebrating the Rich Tapestry <br class="md:hidden" />
+          of Assamese Culture
+        </p>
+
+        <div class="mt-12">
+          <a
+            href="/portfolio.html"
+            class="inline-block bg-[#800000] group relative border-2 border-white/80 px-14 py-5 text-[10px] md:text-[11px] font-semibold tracking-[0.4em] uppercase hover:border-[#800000] transition-colors duration-500 overflow-hidden shadow-2xl rounded-sm"
+          >
+            <span
+              class="relative z-10 group-hover:text-white transition-colors duration-500"
+              >Explore Our Story</span
+            >
+            <div
+              class="absolute inset-0 bg-[#800000] translate-y-full group-hover:translate-y-0 transition-transform duration-500 rounded-sm"
+            ></div>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-[#fdfaf5] to-transparent"
+      ></div>
+    </section>
+
+    <!-- about -->
+
+    <section
+      id="about"
+      class="max-w-6xl mx-auto px-6 py-24 border-t border-gray-100"
+    >
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2 relative">
+          <div class="absolute -top-4 w-96 border border-red-100 z-0"></div>
+          <img
+            src="files/owner.jpg"
+            alt="Founder"
+            class="relative z-10 w-96 rounded h-96 object-cover transition-all duration-1000 shadow-xl"
+          />
+        </div>
+        <div class="w-full md:w-1/2">
+          <span
+            class="text-[10px] tracking-[0.4em] text-maroon font-bold uppercase text-[#800000]"
+            >The Heart Behind the Brand</span
+          >
+          <h2 class="font-serif italic text-4xl text-gray-800 mt-4 mb-6">
+            Inspired by Vedic Traditions & Assamese Grace
+          </h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-6 font-light">
+            With over a decade of experience in the heart of Northeast India, we
+            believe every celebration is a canvas for your cultural story. Our
+            approach is quiet, intentional, and deeply personal. We don't just
+            plan logistics; we curate moments that honor the "Joron" and the
+            "Sangeet" alike.
+          </p>
+          <p class="font-serif italic text-lg text-gray-700">
+            — Saavan Baruah, Founder
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="max-w-7xl mx-auto px-6 py-10 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 items-center">
+        <div class="hidden lg:block h-80 overflow-hidden">
+          <img
+            src="https://i.pinimg.com/1200x/fd/d6/04/fdd604d7ef90f4156124098fd2cbc990.jpg"
+            class="w-full h-full object-cover"
+            alt="Venue"
+          />
+        </div>
+
+        <div class="lg:col-span-2 text-center px-4">
+          <span
+            class="text-[10px] tracking-[0.3em] text-[#800000] uppercase block mb-4"
+            >Ready to bring your vision to life?</span
+          >
+          <h2 class="font-serif italic text-3xl md:text-4xl text-gray-700 mb-6">
+            Let's Start Planning a Day You'll Always Remember
+          </h2>
+          <p
+            class="text-gray-500 text-sm leading-relaxed max-w-md mx-auto mb-8 font-light"
+          >
+            From the scent of fresh marigolds to the rhythmic beat of the Dhol,
+            we handle every detail with precision so you can be present in every
+            moment.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="./portfolio.html">
+              <button
+                class="hover:scale-105 transition-transform text-white text-[10px] tracking-widest uppercase px-8 py-4 bg-[#800000] transition-colors"
+              >
+                View Our Work
+              </button>
+            </a>
+            <a href="./services.html">
+              <button
+                class="border border-gray-300 text-gray-600 text-[10px] tracking-widest uppercase px-8 py-4 hover:bg-gray-50 transition-colors hover:scale-105 transition-transform"
+              >
+                View Our Services
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden lg:block h-80 overflow-hidden">
+          <img
+            src="https://i.pinimg.com/736x/c6/61/ce/c661ce996617cffb686a21846ec4dc43.jpg"
+            class="w-full h-full object-cover"
+            alt="Catering"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- counters -->
+    <section
+      id="stats-section"
+      class="bg-white py-12 border-y border-gray-100 relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8 text-center"
+        >
+          <div
+            class="group border-r-0 md:border-r border-gray-100 last:border-r-0"
+          >
+            <h2
+              class="font-serif text-5xl md:text-6xl text-[#c49a6c] mb-2 flex justify-center italic"
+            >
+              <span class="counter" data-target="250">0</span>+
+            </h2>
+            <p
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-bold"
+            >
+              Weddings
+            </p>
+            <div
+              class="w-8 h-[1px] bg-[#c49a6c] mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+            ></div>
+          </div>
+
+          <div
+            class="group border-r-0 md:border-r border-gray-100 last:border-r-0"
+          >
+            <h2
+              class="font-serif text-5xl md:text-6xl text-[#c49a6c] mb-2 flex justify-center italic"
+            >
+              <span class="counter" data-target="100">0</span>+
+            </h2>
+            <p
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-bold"
+            >
+              Corporate Events
+            </p>
+            <div
+              class="w-8 h-[1px] bg-[#c49a6c] mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+            ></div>
+          </div>
+
+          <div
+            class="group border-r-0 md:border-r border-gray-100 last:border-r-0"
+          >
+            <h2
+              class="font-serif text-5xl md:text-6xl text-[#c49a6c] mb-2 flex justify-center italic"
+            >
+              <span class="counter" data-target="150">0</span>+
+            </h2>
+            <p
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-bold"
+            >
+              Cultural Celebrations
+            </p>
+            <div
+              class="w-8 h-[1px] bg-[#c49a6c] mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+            ></div>
+          </div>
+
+          <div class="group">
+            <h2
+              class="font-serif text-5xl md:text-6xl text-[#c49a6c] mb-2 flex justify-center italic"
+            >
+              <span class="counter" data-target="50">0</span>+
+            </h2>
+            <p
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-bold"
+            >
+              Destination Events
+            </p>
+            <div
+              class="w-8 h-[1px] bg-[#c49a6c] mx-auto mt-4 scale-x-0 group-hover:scale-x-100 transition-transform duration-500"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- recent work -->
+
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <h3 class="font-serif text-4xl text-center text-gray-700 mb-12">
+        Our Recent Work
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="aspect-[3/4] overflow-hidden">
+          <img
+            src="https://i.pinimg.com/1200x/f1/dc/dc/f1dcdc5d6bf999425b5c92e736393f68.jpg"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+        <div class="aspect-[3/4] overflow-hidden">
+          <video
+            src="./assets/Pink Flower Decor   Minimal wedding decor Outdoor wedding decorations Wedding design decoration 720p.mp4"
+            autoplay
+            muted
+            loop
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          ></video>
+        </div>
+        <div class="aspect-[3/4] overflow-hidden">
+          <img
+            src="https://i.pinimg.com/1200x/02/da/04/02da0417a34ae49f0ce6fb989ba32dbf.jpg"
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+          />
+        </div>
+      </div>
+      <div class="text-right mt-6">
+        <a
+          href="/portfolio.html"
+          class="text-[16px] tracking-widest text-black border-b border-gray-400 uppercase hover:text-[#800000]"
+          >View All Projects &rarr;</a
+        >
+      </div>
+    </section>
+
+    <!-- marquee -->
+
+    <section class="border-y border-gray-100 py-8  mb-10 bg-white">
+      <div
+        class="max-w-5xl mx-auto px-6 flex flex-wrap justify-center items-center gap-8 md:gap-16"
+      >
+        <span class="text-[10px] tracking-widest text-gray-400 font-bold"
+          >SEEN IN:</span
+        >
+        <span class="font-serif text-xl lowercase text-gray-600"
+          >Vogue India</span
+        >
+        <span
+          class="font-serif text-xl uppercase tracking-tighter text-gray-600"
+          >WeddingSutra</span
+        >
+        <span class="font-serif text-xl italic text-gray-600"
+          >Assam Tribune</span
+        >
+        <span class="font-serif text-xl text-gray-600">Southern Bride</span>
+      </div>
+    </section>
+
+    <!-- services -->
+
+    <section id="service" class="bg-white/60 py-12">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="font-serif text-4xl text-gray-800 mb-16 tracking-wide">
+          Our Services
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div
+            class="group cursor-pointer"
+            onclick="
+              openService(
+                'Heritage Planning',
+                'Heritage Planning delivers end-to-end wedding execution, seamlessly managing every detail from mandap rituals to final celebration, blending cultural authenticity with modern precision to create elegant, stress-free, and unforgettable wedding experiences.',
+                'https://i.pinimg.com/736x/2c/da/60/2cda60103bfd423f970f7cb3ba623414.jpg',
+              )
+            "
+          >
+            <div
+              class="overflow-hidden mb-6 aspect-square rounded-full border border-gray-100 shadow-sm"
+            >
+              <img
+                src="https://i.pinimg.com/736x/2c/da/60/2cda60103bfd423f970f7cb3ba623414.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+              />
+            </div>
+            <h4 class="font-serif italic text-2xl mb-2 text-gray-800">
+              Heritage Planning
+            </h4>
+            <p class="text-[11px] tracking-[0.2em] text-gray-500 uppercase">
+              From Mandap to Execution
+            </p>
+          </div>
+
+          <div
+            class="group cursor-pointer"
+            onclick="
+              openService(
+                'Design & Styling',
+                'Design & Styling defines the visual language of your wedding, blending aesthetic cultural direction with modern sensibilities to craft cohesive themes, curated décor, and immersive experiences that elevate every ceremony.',
+                'https://i.pinimg.com/1200x/5c/e2/11/5ce2115ff4945cbced1fa39712de1857.jpg',
+              )
+            "
+          >
+            <div
+              class="overflow-hidden mb-6 aspect-square rounded-full border border-gray-100 shadow-sm"
+            >
+              <img
+                src="https://i.pinimg.com/1200x/5c/e2/11/5ce2115ff4945cbced1fa39712de1857.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+              />
+            </div>
+            <h4 class="font-serif italic text-2xl mb-2 text-gray-800">
+              Design & Styling
+            </h4>
+            <p class="text-[11px] tracking-[0.2em] text-gray-500 uppercase">
+              Aesthetic Cultural Direction
+            </p>
+          </div>
+
+          <div
+            class="group cursor-pointer"
+            onclick="
+              openService(
+                'Ritual Coordination',
+                'Ensuring every traditional ceremony is executed with precision, cultural accuracy, and seamless timing, coordinating priests, sequences, and logistics to deliver a flawless and uninterrupted ritual experience.',
+                'https://i.pinimg.com/736x/c9/cd/8b/c9cd8b8b4940e3c6d8bf4dbae71e9c48.jpg',
+              )
+            "
+          >
+            <div
+              class="overflow-hidden mb-6 aspect-square rounded-full border border-gray-100 shadow-sm"
+            >
+              <img
+                src="https://i.pinimg.com/736x/c9/cd/8b/c9cd8b8b4940e3c6d8bf4dbae71e9c48.jpg"
+                class="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+              />
+            </div>
+            <h4 class="font-serif italic text-2xl mb-2 text-gray-800">
+              Ritual Coordination
+            </h4>
+            <p class="text-[11px] tracking-[0.2em] text-gray-500 uppercase">
+              Traditional Ceremony Support
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="serviceModal"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 hidden"
+    >
+      <div
+        class="absolute inset-0 bg-stone-900/40 backdrop-blur-sm transition-opacity duration-500"
+        onclick="closeService()"
+      ></div>
+
+      <div
+        id="modalBox"
+        class="relative mt-20 bg-white max-w-xl w-full rounded-3xl shadow-2xl overflow-hidden modal-hidden transition-all duration-500 ease-out"
+      >
+        <div class="h-64 w-full overflow-hidden">
+          <img id="modalImg" src="" class="w-full h-full object-cover" />
+        </div>
+
+        <button
+          onclick="closeService()"
+          class="absolute top-4 right-4 bg-white/80 backdrop-blur-md rounded-full p-2 text-gray-800 hover:bg-white transition-all shadow-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <div class="p-10">
+          <h3
+            id="modalTitle"
+            class="font-serif text-3xl text-gray-900 mb-4"
+          ></h3>
+          <div class="w-10 h-[2px] bg-stone-300 mb-6"></div>
+          <p
+            id="modalDesc"
+            class="text-gray-600 leading-relaxed text-lg italic font-light"
+          ></p>
+
+          <button
+            onclick="closeService()"
+            class="mt-8 w-full py-4 text-black border hover:text-white hover:bg-[#800000] transition-all uppercase text-[10px] tracking-[4px] font-semibold rounded-xl"
+          >
+            Close Details
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- gallery -->
+
+    <section class="max-w-7xl mx-auto px-6 py-24">
+      <div class="text-center mb-20">
+        <h3 class="font-serif text-4xl text-gray-800">Our Heritage Gallery</h3>
+        <div class="w-16 h-[2px] bg-[#800000] mx-auto mt-4 opacity-30"></div>
+      </div>
+
+      <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/736x/a9/d8/6f/a9d86f2b6e8216987ebad0b1976386ab.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Assamese Wedding Decor"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Mandap Details
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/e9/b2/ac/e9b2ac6f5079c07d552b8599fcd516e6.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Traditional Bride"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Muga Silk Elegance
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/736x/27/e1/ca/27e1caafa48a12c266ffdae097a06a34.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Ceremony Highlights"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              The Rituals
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/e5/ba/9c/e5ba9ce132711d61bdd5517b88cb4575.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Floral Arrangements"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Floral Design
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/95/9b/00/959b00449c6a20417aeea193ed1d9e1e.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Traditional Bride"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Muga Silk Elegance
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/736x/f5/a6/fb/f5a6fb4744165ce33c83bbc1a737608c.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Traditional Joron Ceremony"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              JoronExchange
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/83/7e/5b/837e5ba5c3d3e056e1c6365561bfa7bd.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Assamese Cuisine Presentation"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Assamese Catering
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md col-span-2"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/58/5d/23/585d239df2fe1abd2608cfa89c32bffb.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+            alt="Grand Reception Styling"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Reception Styling
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/df/98/bf/df98bf7db46fcc4740fdf8d69db483e4.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Groom Accessories"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Groom Elegance
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md col-span-2"
+        >
+          <img
+            src="https://i.pinimg.com/736x/c9/cd/8b/c9cd8b8b4940e3c6d8bf4dbae71e9c48.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-105"
+            alt="Entrance Decor"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Cultural Welcomes
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/736x/52/02/c9/5202c97cd1ea71c6f54b0640711826e1.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Pre-wedding rituals"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Adhibas Rituals
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/1200x/0c/ff/d1/0cffd1b7077e475efeafcbbbcb7a8a2e.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Pre-wedding rituals"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Mehandi Celebrations
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/736x/12/12/ea/1212ea2eec62df13c7f5bf51dc45c969.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Pre-wedding rituals"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Adhibas Rituals
+            </p>
+          </div>
+        </div>
+        <div
+          class="relative overflow-hidden rounded-lg break-inside-avoid group cursor-pointer shadow-md"
+        >
+          <img
+            src="https://i.pinimg.com/736x/e9/29/74/e92974671b1b7e2a8c3c50862fd10034.jpg"
+            class="w-full h-auto object-cover transition-transform duration-1000 group-hover:scale-110"
+            alt="Pre-wedding rituals"
+          />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+          >
+            <p class="text-white text-[10px] tracking-widest uppercase">
+              Haldi Ceremony
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- why choose us -->
+    <section class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="w-full lg:w-1/2 relative">
+            <div
+              class="absolute -top-10 -left-10 w-40 h-40 opacity-10 pointer-events-none rotate-12"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/10433/10433044.png"
+                alt="Assamese Motif"
+              />
+            </div>
+            <div class="relative z-10 border-[1px] border-[#c49a6c] p-4">
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200"
+                alt="Elegance in Detail"
+                class="w-full h-[600px] object-cover transition-all duration-1000"
+              />
+            </div>
+            <div
+              class="absolute bottom-12 -right-8 bg-[#c49a6c] text-white p-8 hidden md:block z-20 shadow-xl"
+            >
+              <p class="font-serif italic text-2xl">10+ Years</p>
+              <p class="text-[9px] tracking-[0.3em] uppercase mt-2">
+                Of Curating Memories
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2">
+            <span
+              class="text-[10px] tracking-[0.5em] text-[#c49a6c] uppercase font-bold block mb-4"
+              >The Savanah Difference</span
+            >
+            <h2
+              class="font-serif text-4xl md:text-5xl text-gray-800 leading-tight mb-8"
+            >
+              Why Discerning Couples Choose Our Heritage Touch
+            </h2>
+
+            <div class="space-y-10">
+              <div class="flex gap-6 group">
+                <div
+                  class="flex-shrink-0 w-12 h-12 border border-gray-100 flex items-center justify-center font-serif italic text-[#c49a6c] text-xl group-hover:bg-[#c49a6c] group-hover:text-white transition-all duration-500"
+                >
+                  01
+                </div>
+                <div>
+                  <h4 class="font-serif text-xl text-gray-800 mb-2">
+                    Heritage-First Design
+                  </h4>
+                  <p class="text-gray-500 text-sm font-light leading-relaxed">
+                    We don’t just decorate; we weave your story using the soul
+                    of Assam. From Muga silk drapes to Genda Phool
+                    installations, we honor Indian traditions with a modern,
+                    high-fashion lens.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-6 group">
+                <div
+                  class="flex-shrink-0 w-12 h-12 border border-gray-100 flex items-center justify-center font-serif italic text-[#c49a6c] text-xl group-hover:bg-[#c49a6c] group-hover:text-white transition-all duration-500"
+                >
+                  02
+                </div>
+                <div>
+                  <h4 class="font-serif text-xl text-gray-800 mb-2">
+                    Seamless Multi-Day Management
+                  </h4>
+                  <p class="text-gray-500 text-sm font-light leading-relaxed">
+                    Indian weddings are marathons of joy. We specialize in the
+                    complex logistics of back-to-back rituals—Juron, Mehendi,
+                    Sangeet, and the Reception—ensuring you remain a guest at
+                    your own wedding.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-6 group">
+                <div
+                  class="flex-shrink-0 w-12 h-12 border border-gray-100 flex items-center justify-center font-serif italic text-[#c49a6c] text-xl group-hover:bg-[#c49a6c] group-hover:text-white transition-all duration-500"
+                >
+                  03
+                </div>
+                <div>
+                  <h4 class="font-serif text-xl text-gray-800 mb-2">
+                    Exclusive Destination Access
+                  </h4>
+                  <p class="text-gray-500 text-sm font-light leading-relaxed">
+                    Whether it's a private tea estate in Dibrugarh or a luxury
+                    cruise on the Brahmaputra, our local network grants you
+                    access to venues that others simply cannot book.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-100">
+              <p class="text-gray-400 text-xs italic">
+                "Rooted in tradition, refined by excellence."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials -->
+
+    <section
+      class="bg-[#fcfaf8] py-24 text-center border-y border-gray-100 relative overflow-hidden"
+    >
+    <div class="mb-12">
+    <span class="text-[#800000] text-[10px] tracking-[0.5em] uppercase font-bold block mb-2">Voices</span>
+    <h3 class="  italic text-4xl text-gray-800">What our clients say</h3>
+  </div>
+
+      <div class="max-w-4xl mx-auto px-6 relative">
+        
+        <span
+          class="text-[60px] text-[#800000] opacity-10 font-serif absolute -top-10 left-1/2 -translate-x-1/2"
+          >“</span
+          
+        >
+
+
+        <div class="relative min-h-[300px] flex items-center justify-center">
+          <div
+            class="testimonial-slide transition-all duration-700 opacity-100 transform translate-x-0 absolute inset-0 flex flex-col items-center justify-center"
+          >
+            <p
+              class="font-serif italic text-2xl md:text-3xl text-gray-700 leading-relaxed mb-8 max-w-2xl"
+            >
+              "Saavan turned our vision into a reality that honored our roots
+              beautifully. Her attention to cultural detail and calm presence
+              made our wedding day completely seamless."
+            </p>
+            <div class="w-12 h-[1px] bg-[#800000] mb-4"></div>
+            <span
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-semibold italic"
+              >Ananya & Kabir • Spring 2025</span
+            >
+          </div>
+
+          <div
+            class="testimonial-slide transition-all duration-700 opacity-0 transform translate-x-12 absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+          >
+            <p
+              class="font-serif italic text-2xl md:text-3xl text-gray-700 leading-relaxed mb-8 max-w-2xl"
+            >
+              "The most authentic 'Joron' setup we've ever seen. Saavan's team
+              managed the fusion of our Punjabi and Assamese traditions with
+              such grace and elegance."
+            </p>
+            <div class="w-12 h-[1px] bg-[#800000] mb-4"></div>
+            <span
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-semibold italic"
+              >Ishani & Rahul • Winter 2024</span
+            >
+          </div>
+
+          <div
+            class="testimonial-slide transition-all duration-700 opacity-0 transform translate-x-12 absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
+          >
+            <p
+              class="font-serif italic text-2xl md:text-3xl text-gray-700 leading-relaxed mb-8 max-w-2xl"
+            >
+              "From the Sualkuchi silk drapes to the traditional Gayan-Bayan
+              entry, every moment felt like a tribute to our heritage. Truly the
+              best in Northeast India."
+            </p>
+            <div class="w-12 h-[1px] bg-[#800000] mb-4"></div>
+            <span
+              class="text-[10px] tracking-[0.3em] text-gray-400 uppercase font-semibold italic"
+              >Devi & Siddharth • Autumn 2025</span
+            >
+          </div>
+        </div>
+
+        <button
+          onclick="changeSlide(-1)"
+          class="absolute left-0 top-1/2 -translate-y-1/2 text-gray-300 hover:text-[#800000] transition-colors p-2"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
+        <button
+          onclick="changeSlide(1)"
+          class="absolute right-0 top-1/2 -translate-y-1/2 text-gray-300 hover:text-[#800000] transition-colors p-2"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
+
+        <div class="flex justify-center space-x-3 mt-12">
+          <div
+            class="dot w-1.5 h-1.5 rounded-full bg-[#800000] transition-all duration-300"
+          ></div>
+          <div
+            class="dot w-1.5 h-1.5 rounded-full bg-gray-200 transition-all duration-300"
+          ></div>
+          <div
+            class="dot w-1.5 h-1.5 rounded-full bg-gray-200 transition-all duration-300"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-[#fdfcfb] py-24 border-t border-gray-100">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="text-[10px] tracking-[0.5em] text-[#c49a6c] uppercase font-bold block mb-2"
+            >Guided Grace</span
+          >
+          <h3 class="font-serif text-4xl text-gray-800 italic">
+            Frequently Asked Questions
+          </h3>
+          <div class="w-16 h-[1px] bg-[#c49a6c] mx-auto mt-6"></div>
+        </div>
+
+        <div class="space-y-2">
+          <details class="group border-b border-gray-200 py-6 outline-none">
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none outline-none"
+            >
+              <h4
+                class="font-serif text-lg md:text-xl text-gray-700 group-hover:text-[#c49a6c] transition-colors"
+              >
+                Do you specialize in multi-day Indian wedding rituals?
+              </h4>
+              <span
+                class="text-xl font-light text-[#c49a6c] group-open:rotate-45 transition-transform duration-300"
+                >+</span
+              >
+            </summary>
+            <div
+              class="mt-4 text-sm text-gray-500 font-light leading-relaxed max-w-2xl animate-fadeIn"
+            >
+              Absolutely. From the vibrant Mehendi and Sangeet nights to the
+              serene morning of the Juron (Assamese pre-wedding ritual), we
+              manage the distinct timelines and cultural nuances of every
+              ceremony with precision.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200 py-6 outline-none">
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none outline-none"
+            >
+              <h4
+                class="font-serif text-lg md:text-xl text-gray-700 group-hover:text-[#c49a6c] transition-colors"
+              >
+                Can you source traditional Assamese handloom for decor?
+              </h4>
+              <span
+                class="text-xl font-light text-[#c49a6c] group-open:rotate-45 transition-transform duration-300"
+                >+</span
+              >
+            </summary>
+            <div
+              class="mt-4 text-sm text-gray-500 font-light leading-relaxed max-w-2xl animate-fadeIn"
+            >
+              Yes, we take pride in our roots. We collaborate with local
+              artisans to incorporate authentic Muga and Eri silk drapes, Gamosa
+              motifs, and bamboo-crafted elements into our high-end wedding
+              designs.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200 py-6 outline-none">
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none outline-none"
+            >
+              <h4
+                class="font-serif text-lg md:text-xl text-gray-700 group-hover:text-[#c49a6c] transition-colors"
+              >
+                Do you handle destination weddings outside of Assam?
+              </h4>
+              <span
+                class="text-xl font-light text-[#c49a6c] group-open:rotate-45 transition-transform duration-300"
+                >+</span
+              >
+            </summary>
+            <div
+              class="mt-4 text-sm text-gray-500 font-light leading-relaxed max-w-2xl animate-fadeIn"
+            >
+              While we are based in the heart of the Northeast, we travel
+              globally. Whether it’s a palace wedding in Rajasthan or an
+              intimate ceremony in the tea gardens of Upper Assam, our team
+              handles all logistics.
+            </div>
+          </details>
+
+          <details class="group border-b border-gray-200 py-6 outline-none">
+            <summary
+              class="flex justify-between items-center cursor-pointer list-none outline-none"
+            >
+              <h4
+                class="font-serif text-lg md:text-xl text-gray-700 group-hover:text-[#c49a6c] transition-colors"
+              >
+                What is the ideal timeline to begin planning?
+              </h4>
+              <span
+                class="text-xl font-light text-[#c49a6c] group-open:rotate-45 transition-transform duration-300"
+                >+</span
+              >
+            </summary>
+            <div
+              class="mt-4 text-sm text-gray-500 font-light leading-relaxed max-w-2xl animate-fadeIn"
+            >
+              For large-scale Indian weddings, we recommend 8 to 12 months. This
+              allows us to secure the finest heritage venues and book the most
+              sought-after traditional artists and vendors.
+            </div>
+          </details>
+        </div>
+
+        <div class="mt-10 text-center">
+          <p class="text-xs text-gray-400 italic mb-4">
+            Have a more specific question about your big day?
+          </p>
+          <a
+            href="https://wa.me/message/7LZKJVZXA4Y6C1"
+            class="text-[11px] tracking-widest text-[#800000] uppercase border-b border-[#800000] pb-1 hover:text-black hover:border-black transition-all"
+          >
+            Reach out to our team &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+
+    <section
+      id="contact"
+      class="bg-[#fdfaf5] py-24 px-6 border-t border-gray-100"
+    >
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-16 items-start">
+          <div class="w-full lg:w-1/3 mt-8">
+            <h3
+              class="font-serif italic text-5xl md:text-6xl text-gray-800 leading-tight mb-6"
+            >
+              Start Your <br /><span class="text-[#800000]">Celebration</span>
+            </h3>
+            <p class="text-gray-600 text-lg font-light leading-relaxed mb-10">
+              We bring heritage to life. Fill out the form, and let's discuss
+              how to make your wedding truly unforgettable.
+            </p>
+
+            <div class="space-y-4 border-l-2 border-[#800000]/20 pl-6">
+              <p
+                class="text-sm font-semibold tracking-widest text-gray-400 uppercase"
+              >
+                Direct Contact
+              </p>
+              <p class="text-xl font-serif text-gray-800">
+                hello@saavanevents.com
+              </p>
+              <p class="text-xl font-serif text-gray-800">+91 98765 43210</p>
+            </div>
+          </div>
+
+          <div
+            class="w-full lg:w-2/3 bg-white p-10 md:p-16 shadow-xl rounded-sm"
+          >
+            <form class="space-y-10">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="relative">
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-[#800000] mb-3"
+                    >Your Full Name</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="e.g. Priyanku Baruah"
+                    class="w-full bg-gray-50 border-b-2 border-gray-200 py-4 px-4 text-base text-gray-800 focus:border-[#800000] focus:bg-white outline-none transition-all placeholder:text-gray-400"
+                  />
+                </div>
+                <div class="relative">
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-[#800000] mb-3"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="name@email.com"
+                    class="w-full bg-gray-50 border-b-2 border-gray-200 py-4 px-4 text-base text-gray-800 focus:border-[#800000] focus:bg-white outline-none transition-all placeholder:text-gray-400"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="relative">
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-[#800000] mb-3"
+                    >Proposed Date</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="December 2026"
+                    class="w-full bg-gray-50 border-b-2 border-gray-200 py-4 px-4 text-base text-gray-800 focus:border-[#800000] focus:bg-white outline-none transition-all placeholder:text-gray-400"
+                  />
+                </div>
+                <div class="relative">
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-[#800000] mb-3"
+                    >Venue / City</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Guwahati, Assam"
+                    class="w-full bg-gray-50 border-b-2 border-gray-200 py-4 px-4 text-base text-gray-800 focus:border-[#800000] focus:bg-white outline-none transition-all placeholder:text-gray-400"
+                  />
+                </div>
+              </div>
+
+              <div class="relative">
+                <label
+                  class="block text-xs font-bold uppercase tracking-widest text-[#800000] mb-3"
+                  >Tell us about your dream wedding</label
+                >
+                <textarea
+                  rows="4"
+                  placeholder="What are the specific Assamese rituals or themes you want to include?"
+                  class="w-full bg-gray-50 border-b-2 border-gray-200 py-4 px-4 text-base text-gray-800 focus:border-[#800000] focus:bg-white outline-none transition-all resize-none placeholder:text-gray-400"
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="w-full md:w-auto bg-[#800000] text-white px-16 py-6 text-xs font-bold tracking-[0.4em] uppercase hover:bg-black transition-all duration-300 shadow-lg hover:shadow-2xl active:scale-95"
+                >
+                  Send Your Inquiry
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a
+      href="https://wa.me/message/7LZKJVZXA4Y6C1"
+      target="_blank"
+      class="fixed bottom-8 right-8 bg-[#800000] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform z-50 flex items-center justify-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.938 3.659 1.432 5.63 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+        />
+      </svg>
+    </a>
+
+    <footer class="bg-white border-t border-gray-100 pt-24 pb-12">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 mb-20"
+      >
+        <div>
+          <h5 class="font-serif italic text-xl mb-6">Stay Inspired</h5>
+          <p class="text-xs text-gray-400 tracking-widest uppercase mb-4">
+            Join our monthly newsletter
+          </p>
+          <div class="flex border-b border-gray-300 pb-2">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="bg-transparent text-sm w-full outline-none placeholder-gray-300 font-light"
+            />
+            <button
+              class="text-[10px] tracking-widest uppercase font-bold text-gray-600"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2
+            class="font-serif text-3xl tracking-widest text-[#800000] mb-6 uppercase"
+          >
+            SAAVAN
+          </h2>
+          <div
+            class="flex justify-center space-x-6 text-gray-400 text-xs tracking-widest"
+          >
+            <a href="#" class="hover:text-black">INSTAGRAM</a>
+            <a href="#" class="hover:text-black">PINTEREST</a>
+            <a href="#" class="hover:text-black">FACEBOOK</a>
+          </div>
+        </div>
+
+        <div class="md:text-right">
+          <h5 class="font-serif italic text-xl mb-6">Get in Touch</h5>
+          <p class="text-gray-500 text-sm font-light mb-1">
+            hello@saavanevents.com
+          </p>
+          <p class="text-gray-500 text-sm font-light mb-1">Guwahati, Assam</p>
+          <p class="text-gray-500 text-sm font-light">+91 8638695791</p>
+        </div>
+      </div>
+
+      <div class="text-center border-t border-gray-50 pt-12">
+        <p class="text-[10px] tracking-[0.3em] text-gray-600 uppercase italic">
+          &copy; 2026 Saavan Events Design Co. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".testimonial-slide");
+      const dots = document.querySelectorAll(".dot");
+
+      const modal = document.getElementById("serviceModal");
+      const box = document.getElementById("modalBox");
+
+      let slideIndex = 0;
+      const hero = document.querySelectorAll("#hero-slider .slide");
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const spans = document.querySelectorAll("#hamburger span");
+      let isMenuOpen = false;
+
+      const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          // Open state
+          mobileMenu.classList.replace("translate-y-[-100%]", "translate-y-0");
+          mobileMenu.classList.replace("opacity-0", "opacity-100");
+          mobileMenu.classList.replace(
+            "pointer-events-none",
+            "pointer-events-auto",
+          );
+          document.body.style.overflow = "hidden";
+
+          // X Animation
+          spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+          spans[1].style.opacity = "0";
+          spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
+        } else {
+          // Close state (The animation you want)
+          mobileMenu.classList.replace("translate-y-0", "translate-y-[-100%]");
+          mobileMenu.classList.replace("opacity-100", "opacity-0");
+          mobileMenu.classList.replace(
+            "pointer-events-auto",
+            "pointer-events-none",
+          );
+          document.body.style.overflow = "auto";
+
+          // Hamburger Animation
+          spans[0].style.transform = "none";
+          spans[1].style.opacity = "1";
+          spans[2].style.transform = "none";
+        }
+      };
+
+      // Listeners
+      menuBtn.addEventListener("click", toggleMenu);
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isMenuOpen) toggleMenu(); // Only close if it's actually open
+        });
+      });
+      function autoSlide() {
+        // Hide current slide
+        hero[slideIndex].classList.replace("opacity-100", "opacity-0");
+        hero[slideIndex]
+          .querySelector("img")
+          .classList.remove("animate-kenburns");
+
+        // Move to next slide
+        slideIndex = (slideIndex + 1) % hero.length;
+
+        // Show next slide
+        hero[slideIndex].classList.replace("opacity-0", "opacity-100");
+        hero[slideIndex].querySelector("img").classList.add("animate-kenburns");
+      }
+
+      // Change slide every 5 seconds
+      setInterval(autoSlide, 5000);
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? "1" : "0";
+          slide.style.transform =
+            i === index
+              ? "translateX(0)"
+              : i < index
+                ? "translateX(-20px)"
+                : "translateX(20px)";
+          slide.style.pointerEvents = i === index ? "auto" : "none";
+
+          dots[i].style.backgroundColor = i === index ? "#800000" : "#e5e7eb";
+          dots[i].style.width = i === index ? "24px" : "6px";
+          dots[i].style.borderRadius = i === index ? "4px" : "50%";
+        });
+      }
+
+      // service modal
+      function openService(title, description, imageUrl) {
+        const modal = document.getElementById("serviceModal");
+        const box = document.getElementById("modalBox");
+        const img = document.getElementById("modalImg");
+
+        // Update Content
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDesc").innerText = description;
+        img.src = imageUrl;
+
+        // Show Modal Container
+        modal.classList.remove("hidden");
+
+        // Trigger Pop Animation
+        setTimeout(() => {
+          box.classList.remove("modal-hidden");
+          box.classList.add("modal-visible");
+        }, 10);
+
+        // Prevent body scrolling while modal is open
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeService() {
+        // Animate Out
+        box.classList.remove("modal-visible");
+        box.classList.add("modal-hidden");
+
+        // Hide container & restore scroll after animation
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }, 200);
+      }
+
+      function changeSlide(direction) {
+        currentSlide =
+          (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Auto-advance every 5 seconds
+      setInterval(() => changeSlide(1), 5000);
+
+      const animateCounters = () => {
+        const counters = document.querySelectorAll(".counter");
+        const speed = 100; // Lower is slower
+
+        counters.forEach((counter) => {
+          const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+
+            // Calculate increment
+            const inc = Math.ceil(target / speed);
+
+            if (count < target) {
+              counter.innerText = count + inc;
+              setTimeout(updateCount, 20); // Frequency of update
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // Intersection Observer to trigger when visible
+      const observerOptions = {
+        threshold: 0.5, // Triggers when 50% of the section is visible
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target); // Runs only once
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(document.getElementById("stats-section"));
+    </script>
+  </body>
+</html>

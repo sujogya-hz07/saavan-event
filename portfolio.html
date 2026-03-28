@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Archive | SAAVAN Heritage Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      .font-serif { font-family: "Playfair Display", serif; }
+      .font-sans { font-family: "Montserrat", sans-serif; }
+      html { scroll-behavior: smooth; }
+
+      .bg-assam-heritage {
+        background-color: #fdfaf5;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23800000' fill-opacity='0.02'/%3E%3C/svg%3E");
+      }
+
+      /* Pinterest Masonry Logic */
+      .portfolio-masonry {
+        column-count: 1;
+        column-gap: 1.5rem;
+        width: 100%;
+      }
+      @media (min-width: 768px) { .portfolio-masonry { column-count: 2; } }
+      @media (min-width: 1024px) { .portfolio-masonry { column-count: 3; } }
+
+      .portfolio-item {
+        display: inline-block;
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: 2rem;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .portfolio-item.hidden {
+        display: none;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      /* Custom Horizontal Scroller */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      .filter-btn {
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        position: relative;
+        padding-bottom: 4px;
+      }
+      .filter-btn::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #800000;
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      .filter-btn.active { color: #800000; }
+      .filter-btn.active::after { width: 100%; }
+    </style>
+  </head>
+  <body class="bg-assam-heritage text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <nav
+      class="border-b border-gray-100 py-4 bg-white/95 backdrop-blur-md sticky top-0 z-[100]"
+    >
+      <div class="flex items-center justify-between px-6 md:px-20">
+        <a
+          href="#"
+          class="relative z-[120] bg-[#800000] px-5 py-2 rounded-lg shadow-sm"
+        >
+          <span class="text-white font-serif text-sm tracking-wider"
+            >SAAVAN</span
+          >
+        </a>
+
+        <ul
+          class="hidden lg:flex items-center space-x-10 text-[11px] tracking-[0.25em] text-gray-500 font-medium"
+        >
+          <li>
+            <a href="/index.html" class="hover:text-[#800000] transition-colors"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a href="/about.html" class="hover:text-[#800000] transition-colors"
+              >ABOUT</a
+            >
+          </li>
+          <li>
+            <a
+              href="/services.html"
+              class="hover:text-[#800000] transition-colors"
+              >SERVICES</a
+            >
+          </li>
+          <li>
+            <a
+              href="/portfolio.html"
+              class="hover:text-[#800000] transition-colors"
+              >PORTFOLIO</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testimonials.html"
+              class="hover:text-[#800000] transition-colors"
+              >TESTIMONIALS</a
+            >
+          </li>
+          <li>
+            <a
+              href="./index.html#contact"
+              class="hover:text-[#800000] transition-colors"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+
+        <button
+          id="menu-btn"
+          class="lg:hidden relative z-[120] p-2 focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <div
+            id="hamburger"
+            class="w-6 h-4 relative flex flex-col justify-between"
+          >
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300 transform origin-center"
+            ></span>
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300"
+            ></span>
+            <span
+              class="w-full h-[1.5px] bg-gray-800 transition-all duration-300 transform origin-center"
+            ></span>
+          </div>
+        </button>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 h-screen w-screen bg-white translate-y-[-100%] transition-transform duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] z-[110] flex flex-col items-center justify-center pointer-events-none opacity-0 transition-opacity"
+      >
+        <div
+          class="absolute inset-0 flex items-center justify-center pointer-events-none"
+        >
+          <span
+            class="text-[20vw] font-serif italic text-gray-50 opacity-[0.03] select-none"
+            >Saavan</span
+          >
+        </div>
+
+        <div
+          class="relative flex flex-col items-center space-y-8 md:space-y-12 text-center"
+        >
+          <a
+            href="/index.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Home</a
+          >
+          <a
+            href="/about.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >About</a
+          >
+          <a
+            href="/services.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Services</a
+          >
+          <a
+            href="/portfolio.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Portfolio</a
+          >
+          <a
+            href="/testimonials.html"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Testimonials</a
+          >
+          <a
+            href="./index.html#contact"
+            class="mobile-link group text-4xl md:text-6xl font-serif italic tracking-tighter text-gray-800 hover:text-[#800000] transition-all"
+            >Contact</a
+          >
+        </div>
+
+        <div
+          class="absolute bottom-12 text-[10px] tracking-[0.3em] text-gray-400 uppercase"
+        >
+          Instagram — Pinterest — Facebook
+        </div>
+      </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 pt-20 pb-8 text-center">
+      <span class="text-[10px] tracking-[0.5em] text-[#800000] uppercase block mb-4 font-bold">The Complete Archive</span>
+      <h1 class="font-serif italic text-5xl md:text-7xl text-gray-800">Visual Stories</h1>
+      <p class="mt-4 text-gray-400 font-light text-sm max-w-xl mx-auto">Explore the diverse tapestry of celebrations across every detail of the heritage journey.</p>
+    </header>
+
+    <section class="sticky top-[73px] bg-white/90 backdrop-blur-md z-50 border-y border-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex overflow-x-auto no-scrollbar py-6 space-x-6 text-[10px] tracking-[0.3em] font-bold text-gray-400 uppercase">
+          <button class="filter-btn active" onclick="filterSelection('all')">All Photos</button>
+          <button class="filter-btn" onclick="filterSelection('pre-wedding')">Pre-Wedding</button>
+          <button class="filter-btn" onclick="filterSelection('traditional')">Assamese Traditional</button>
+          <button class="filter-btn" onclick="filterSelection('decor')">Decor</button>
+          <button class="filter-btn" onclick="filterSelection('ceremony')">Ceremony</button>
+          <button class="filter-btn" onclick="filterSelection('reception')">Reception</button>
+          <button class="filter-btn" onclick="filterSelection('food')">Catering</button>
+          <button class="filter-btn" onclick="filterSelection('entertainment')">Entertainment</button>
+          <button class="filter-btn" onclick="filterSelection('setup')">Setup</button>
+          <button class="filter-btn" onclick="filterSelection('special')">Special Moments</button>
+          <button class="filter-btn" onclick="filterSelection('other')">Other Events</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-6 py-16">
+      <div class="portfolio-masonry" id="masonry-grid">
+        
+        <div class="portfolio-item pre-wedding group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="https://i.pinimg.com/736x/ea/40/4f/ea404f2ad48f45b923e9b847bf199311.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Engagement Ceremony</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Pre-Wedding</p></div>
+        </div>
+        
+
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="files/mandap design.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Mandap Design</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Decor</p></div>
+        </div>
+        
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="files/Green Decoration.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Sitting Area</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Decoration</p></div>
+        </div>
+
+
+        
+
+
+        <div class="portfolio-item traditional group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/jurun video.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-serif italic text-lg">Jurun Ritual</h3>
+            <p class="text-[9px] tracking-widest text-gray-400 uppercase">assamese tradition</p>
+          </div>
+        </div>
+          
+
+        <div class="portfolio-item food reception group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/cateringvideo.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-serif italic text-lg">Reception</h3>
+            <p class="text-[9px] tracking-widest text-gray-400 uppercase">Catering</p>
+          </div>
+        </div>
+
+
+
+        <div class="portfolio-item traditional group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/soklong.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-serif italic text-lg">Chaklang Biya</h3>
+            <p class="text-[9px] tracking-widest text-gray-400 uppercase">Ahom Community wedding</p>
+          </div>
+        </div>
+
+
+
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/decoration stage.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+                      <h3 class="font-serif italic text-lg">Decoration</h3>
+                      <p class="text-[9px] tracking-widest text-gray-400 uppercase">stage</p>
+                    </div>
+                  </div>
+
+          <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/Decoration&Entry.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-serif italic text-lg">Entrance and Hall</h3>
+            <p class="text-[9px] tracking-widest text-gray-400 uppercase">decor</p>
+          </div>
+        </div>
+
+
+
+          
+
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/decoration stage.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-serif italic text-lg">Decoration</h3>
+            <p class="text-[9px] tracking-widest text-gray-400 uppercase">stage</p>
+          </div>
+        </div>
+
+        <div class="portfolio-item traditional group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <video 
+              src="files/soklong2.mp4" 
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+          </div>
+          <div class="mt-4">
+            <h3 class="font-serif italic text-lg">Chaklang Biya</h3>
+            <p class="text-[9px] tracking-widest text-gray-400 uppercase">Ahom Community wedding</p>
+          </div>
+        </div>
+
+
+
+          <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="files/Entrance Decoration.webp" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Entrance</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Decoration</p></div>
+        </div>
+
+
+          <div class="portfolio-item special group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="files/Assamese_marriage_bidai.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Assamese Bride Vidai </h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Moments</p></div>
+        </div>
+
+      
+
+        <div class="portfolio-item traditional group cursor-pointer">
+          <div class="relative overflow-hidden aspect-square bg-stone-100">
+            <img src="https://i.pinimg.com/1200x/f1/dc/dc/f1dcdc5d6bf999425b5c92e736393f68.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Juron" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Fire Ritual </h3><p class="text-[9px] tracking-widest text-[#800000] font-bold uppercase">Traditional Heritage</p></div>
+        </div>
+
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[16/9] bg-stone-100">
+            <img src="https://i.pinimg.com/1200x/7e/6f/ae/7e6faee58ffd1f178e20244a52fe9b4c.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Mandap Decor" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Mandap Area</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Decoration</p></div>
+        </div>
+
+        <div class="portfolio-item ceremony group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="https://i.pinimg.com/1200x/95/9b/00/959b00449c6a20417aeea193ed1d9e1e.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Varmala" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">The Sacred Varmala</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Ceremony</p></div>
+        </div>
+
+        <div class="portfolio-item reception group cursor-pointer ">
+          <div class="relative overflow-hidden aspect-[9/16] bg-stone-100">
+             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+               <source src="./assets/96e30d4a727c0d3e5bf3c5b72e5ee3d2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Couple First Dance</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Reception</p></div>
+        </div>
+
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="files/entrance003.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Entrance</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Decoration</p></div>
+        </div>
+
+        <div class="portfolio-item food group cursor-pointer">
+          <div class="relative overflow-hidden aspect-square bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Assamese Food" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Traditional Ahom Feast</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Catering</p></div>
+        </div>
+
+        <div class="portfolio-item decor group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="files/Bride Mandap.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Engagement" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Bride Mandap</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Decoration</p></div>
+        </div>
+
+
+        <div class="portfolio-item entertainment group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[4/5] bg-stone-100">
+            <img src="https://cdn0.weddingwire.in/article/2024/3_2/960/jpg/124202-happy-bride-photography-2.jpeg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Bihu Dance" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Rhythmic Bihu Beats</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Entertainment</p></div>
+        </div>
+
+        <div class="portfolio-item setup group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[16/9] bg-stone-100">
+            <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Lighting" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Atmospheric Lighting Design</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Setup</p></div>
+        </div>
+
+        <div class="portfolio-item special group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/4] bg-stone-100">
+            <img src="https://i.pinimg.com/736x/a9/d8/6f/a9d86f2b6e8216987ebad0b1976386ab.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Bridal Prep" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Bride Getting Ready</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Special Moments</p></div>
+        </div>
+
+        <div class="portfolio-item other group cursor-pointer">
+          <div class="relative overflow-hidden aspect-square bg-stone-100">
+            <img src="https://i.pinimg.com/736x/97/db/e2/97dbe285f7fba7ae2ca68c8772bd3600.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" alt="Corporate" />
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Gala Corporate Programs</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Other Events</p></div>
+        </div>
+         <div class="portfolio-item other group cursor-pointer">
+          <div class="relative overflow-hidden aspect-[3/2] bg-stone-100">
+            <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="./assets/fb0456f8ff0ad05f3ba5f3cf0d587a76.mp4"></video>
+
+            
+          </div>
+          <div class="mt-4"><h3 class="font-serif italic text-lg">Gala Corporate Programs</h3><p class="text-[9px] tracking-widest text-gray-400 uppercase">Other Events</p></div>
+        </div>
+
+      </div>
+
+      <div class="mt-24 text-center">
+        <a href="./index.html#contact" class="inline-block bg-[#800000] text-white px-12 py-5 text-[10px] tracking-[0.4em] uppercase hover:bg-black transition-all">Start Your Celebration</a>
+      </div>
+    </main>
+
+   <footer class="bg-white border-t border-gray-100 pt-24 pb-12">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 mb-20"
+      >
+        <div>
+          <h5 class="font-serif italic text-xl mb-6">Stay Inspired</h5>
+          <p class="text-xs text-gray-400 tracking-widest uppercase mb-4">
+            Join our monthly newsletter
+          </p>
+          <div class="flex border-b border-gray-300 pb-2">
+            <input
+              type="email"
+              placeholder="Email Address"
+              class="bg-transparent text-sm w-full outline-none placeholder-gray-300 font-light"
+            />
+            <button
+              class="text-[10px] tracking-widest uppercase font-bold text-gray-600"
+            >
+              Join
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h2
+            class="font-serif text-3xl tracking-widest text-[#800000] mb-6 uppercase"
+          >
+            SAAVAN
+          </h2>
+          <div
+            class="flex justify-center space-x-6 text-gray-400 text-xs tracking-widest"
+          >
+            <a href="#" class="hover:text-black">INSTAGRAM</a>
+            <a href="#" class="hover:text-black">PINTEREST</a>
+            <a href="#" class="hover:text-black">FACEBOOK</a>
+          </div>
+        </div>
+
+        <div class="md:text-right">
+          <h5 class="font-serif italic text-xl mb-6">Get in Touch</h5>
+          <p class="text-gray-500 text-sm font-light mb-1">
+            hello@saavanevents.com
+          </p>
+          <p class="text-gray-500 text-sm font-light mb-1">Guwahati, Assam</p>
+          <p class="text-gray-500 text-sm font-light">+91 8638695791</p>
+        </div>
+      </div>
+
+      <div class="text-center border-t border-gray-50 pt-12">
+        <p class="text-[10px] tracking-[0.3em] text-gray-600 uppercase italic">
+          &copy; 2026 Saavan Events Design Co. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+       const dots = document.querySelectorAll(".dot");
+
+      let slideIndex = 0;
+      const hero = document.querySelectorAll("#hero-slider .slide");
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const spans = document.querySelectorAll("#hamburger span");
+      let isMenuOpen = false;
+
+      const toggleMenu = () => {
+        isMenuOpen = !isMenuOpen;
+
+        if (isMenuOpen) {
+          // Open state
+          mobileMenu.classList.replace("translate-y-[-100%]", "translate-y-0");
+          mobileMenu.classList.replace("opacity-0", "opacity-100");
+          mobileMenu.classList.replace(
+            "pointer-events-none",
+            "pointer-events-auto",
+          );
+          document.body.style.overflow = "hidden";
+
+          // X Animation
+          spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+          spans[1].style.opacity = "0";
+          spans[2].style.transform = "rotate(-45deg) translate(5px, -5px)";
+        } else {
+          // Close state (The animation you want)
+          mobileMenu.classList.replace("translate-y-0", "translate-y-[-100%]");
+          mobileMenu.classList.replace("opacity-100", "opacity-0");
+          mobileMenu.classList.replace(
+            "pointer-events-auto",
+            "pointer-events-none",
+          );
+          document.body.style.overflow = "auto";
+
+          // Hamburger Animation
+          spans[0].style.transform = "none";
+          spans[1].style.opacity = "1";
+          spans[2].style.transform = "none";
+        }
+      };
+
+      // Listeners
+      menuBtn.addEventListener("click", toggleMenu);
+
+      document.querySelectorAll(".mobile-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (isMenuOpen) toggleMenu(); // Only close if it's actually open
+        });
+      });
+      function autoSlide() {
+        // Hide current slide
+        hero[slideIndex].classList.replace("opacity-100", "opacity-0");
+        hero[slideIndex]
+          .querySelector("img")
+          .classList.remove("animate-kenburns");
+
+        // Move to next slide
+        slideIndex = (slideIndex + 1) % hero.length;
+
+        // Show next slide
+        hero[slideIndex].classList.replace("opacity-0", "opacity-100");
+        hero[slideIndex].querySelector("img").classList.add("animate-kenburns");
+      }
+
+      // Change slide every 5 seconds
+      setInterval(autoSlide, 5000);
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? "1" : "0";
+          slide.style.transform =
+            i === index
+              ? "translateX(0)"
+              : i < index
+                ? "translateX(-20px)"
+                : "translateX(20px)";
+          slide.style.pointerEvents = i === index ? "auto" : "none";
+
+          dots[i].style.backgroundColor = i === index ? "#800000" : "#e5e7eb";
+          dots[i].style.width = i === index ? "24px" : "6px";
+          dots[i].style.borderRadius = i === index ? "4px" : "50%";
+        });
+      }
+
+      function changeSlide(direction) {
+        currentSlide =
+          (currentSlide + direction + slides.length) % slides.length;
+        showSlide(currentSlide);
+      }
+
+      // Auto-advance every 5 seconds
+      setInterval(() => changeSlide(1), 5000);
+      function filterSelection(category) {
+        const items = document.querySelectorAll('.portfolio-item');
+        const buttons = document.querySelectorAll('.filter-btn');
+
+        buttons.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.getAttribute('onclick').includes(`'${category}'`)) btn.classList.add('active');
+        });
+
+        items.forEach(item => {
+          if (category === 'all' || item.classList.contains(category)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
